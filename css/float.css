@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #b1cbbb;
+}
+
+#main-container {
+  min-height: calc(100vh - 57px);
+}
+
+a {
+  text-decoration: none;
+  color: #f7cac9;
+}
+
+span a{
+  -webkit-text-stroke: .8px #333; 
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: 'Berkshire Swash', cursive;
+  color: #f18973;
+  text-shadow: 5px 5px 3px #337, -5px 5px 3px #337, 5px -5px 3px #337, -5px -5px 3px #337;
+}
+
+.container {
+  position: relative;
+}
+
+.mw { /* max width */
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.btn {
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f7786b;
+}
+
+.btn:hover {
+  background-color: #f7cac9;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+
+.thumbnail {
+  height: 100%;
+  margin: 0 10px 10px 10px;
+}
+
+.article-content {
+  width: 50%;
+}
+
+.card {
+  text-align: center;
+  background-color: #87bdd8;
+  color: #034f84;
+  font-size: .9em;
+  display: inline-block;
+  border: 1px #777 solid;
+  width: 270px;
+  margin: 10px;
+}
+
+.card img {
+  width: 100%;
+  margin: 0;
+}
+
+.card-content {
+  padding: 10px;
+}
+
+.card-content h2 {
+  margin: 0 auto 9px;
+}
+
+.card-content p {
+  text-align: justify;
+  margin-bottom: 12px;
+}
+
+.card button {
+  width: 100%;
+  border-radius: 0;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 35px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+:target + .container {
+  box-shadow: 20px 20px 15px #034f84,
+  -20px -20px 15px #034f84,
+  20px -20px 15px #034f84,
+  -20px 20px 15px #034f84 !important;
+}
+
+.trans1, .trans2 {
+  transition: transform 0.3s;
+  z-index: 2;
+}
+
+.trans1:hover {
+  transform: scale(1.3);
+}
+
+.trans2:hover {
+  transform: scale(1.1);
+}
+
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  line-height: 0.8;
+  z-index: 1000;
+  border-bottom: 1px #f7cac9 solid;
+}
+
+header nav {
+  background-color: #034f84;
+  display: block;
+}
+
+header nav h2, header nav ul {
+  display: inline-block;
+}  
+
+header nav h2 {
+  cursor: pointer;
+  margin: 20px;
+  color: #f7786b;
+}
+
+header nav img {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 9px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px #f7cac9 solid;
+}
+
+header nav ul {
+  position: absolute;
+}
+
+header nav ul li {
+  display: inline-block;
+}
+
+header nav ul li a {
+  display: inline-block;
+  padding: 22px 10px;
+}
+
+.active, header nav ul li a:hover {
+  background-color: #92a8d1;
+  color: #f0f0f0;
+  border-bottom: 3px #c94c4c solid;
+}
+
+#showcase {
+  text-align: center;
+  height: 500px;
+  background: linear-gradient(to top, transparent, transparent, #034f84), url("../images/landscape.jpg") no-repeat center/cover;
+  box-shadow: 15px 15px 15px #888888,
+  -15px -15px 15px #888888,
+  15px -15px 15px #888888,
+  -15px 15px 15px #888888;
+}
+
+#showcase h1,
+#showcase p {
+  display: block;
+}
+
+#showcase h1 {
+  font-size: 2.5em;
+  font-family: 'Berkshire Swash', cursive;
+}
+
+#showcase p {
+  margin-top: 50px;
+}
+
+#showcase-content {
+  color: #fff;
+  text-shadow: 5px 5px 3px #034f84, -5px 5px 3px #034f84;
+  font-size: 1.5em;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#pre1, #pre2 {
+  height: 50px;
+}
+
+#articles {
+  margin: 50px auto;
+}
+
+article {
+  font-size: 1.em;
+  color: #f7cac9;
+  background-color: #034f84;
+  overflow: auto;
+  padding: 30px;
+  margin-top: 80px;
+  box-shadow: 15px 15px 15px #888888,
+              -15px -15px 15px #888888,
+              15px -15px 15px #888888,
+              -15px 15px 15px #888888;
+}
+
+article p {
+  margin: 20px;
+  text-align: justify;
+}
+
+article button {
+  margin: 20px;
+}
+
+article img {
+  margin: auto 20px;
+  width: 45%;
+}
+
+#cards {
+  text-align: center;
+  background-color: #034f84;
+  margin: 120px auto;
+  padding: 50px 0;
+  box-shadow: 15px 15px 15px #888888, -15px -15px 15px #888888, 15px -15px 15px #888888, -15px 15px 15px #888888;
+}
+
+#cards #act-heading {
+  margin: 20px auto 40px;
+  font-size: 2em;
+  color: #f7cac9;
+}
+
+footer {
+  font-size: 1.2em;
+  background-color: #034f84;
+  color: #f7cac9;
+  height: 80px;
+  padding: 10px;
+}
+
+footer address, footer p {
+  display: inline-block;
+  margin: 22px 10px;
+}
+
+footer #social-media {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+@media (max-width: 1000px) {
+
+  footer {
+    height: 120px;
+  }
+
+  footer #footer-content {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+
+  footer #social-media {
+    position: relative;
+    text-align: center;
+  }
+  
+  footer address, footer p {
+    margin: 5px;
+  }
+}
+
+@media (max-width: 910px) {
+  article {
+    font-size: 1.4em;
+  }
+
+  .article-content,
+  article img {
+    float: none !important;
+    width: 100%;
+    margin: auto !important;
+    text-align: center;
+  }
+  
+  article h2 {
+    display: block;
+    text-align: center;
+    margin: 20px;
+    padding: 0em;
+  }
+  
+  article p {
+    margin-bottom: 30px;
+  }
+  
+  article button {
+    display: block;
+    margin: auto;
+    width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  article {
+    font-size: .9em;
+  }
+}
+
+@media (max-width: 670px) {
+  .card {
+    transition: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .fa {
+    width: 50px;
+    height: 50px;
+  }
+
+  header {
+    text-align: center;
+  }
+
+  header h2 {
+    margin: 5px !important;
+    padding: 2px;
+  }
+
+  header nav ul {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  header nav ul li a {
+    padding: 10px;
+    margin: 0;
+  }
+
+  header #profile-pic {
+    right: 3px;
+    top: 12px;
+  }
+
+
+  footer {
+    font-size: .9em;
+    height: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  header nav ul, header nav ul li, header nav ul a {
+    display: block !important;
+  }
+  
+  header #profile-pic {
+    right: 1px;
+    top: 4px;
+  }
+
+  #showcase {
+    margin-top: 180px;
+  }
+
+  article p {
+    margin: 1px 1px 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .fa {
+    width: 40px;
+    height: 40px;
+  }
+
+  footer {
+    height: 125px;
+  }
+
+  footer #social-media {
+    font-size: .9em;
+  }
+}
+
+@media (min-width: 1px) {
+  article, .card {
+    margin-top: 30px;
+  }
+
+  article {
+    padding: 20px 0;
+  }
+
+  article button {
+    min-width: 150px;
+    margin-bottom: 20px;
+  }
+}
+
