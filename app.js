@@ -22,7 +22,7 @@ function ind (pos1, pos2, pos3) {
 }
 
 window.onscroll = function() {
-  if (window.location.pathname === "/index.html") {
+  if (window.location.pathname === "/index.html" || window.location.pathname === "") {
     ind(590, 1040, 1483);
   } else if (window.location.pathname === "/flexbox.html") {
     ind(559, 1050, 1515);
