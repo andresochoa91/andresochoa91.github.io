@@ -1,3 +1,5 @@
+console.log(window.location.pathname);
+
 let anchors = Array.from(document.querySelectorAll("ul li a"));
 function position (index) {
   anchors[index].classList = "active";
